@@ -4,11 +4,13 @@ Using SLAM map to launch the navigation
 # - Launch Simulation World:
 
 $ export TURTLEBOT3_MODEL=burger
+
 $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 # - Run Navigation Node:
 
 $ export TURTLEBOT3_MODEL=burger
+
 $ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 
 # - Estimate Initial Pose
@@ -17,6 +19,7 @@ $ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/m
 #### 4. Repeat step 1 and 2 until the LDS sensor data is overlayed on the saved map.
 #### 5. Launch keyboard teleoperation node to precisely locate the robot on the map:
 $ export TURTLEBOT3_MODEL=burger
+
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 #### 5. Move the robot back and forth a bit to collect the surrounding environment information and narrow down the estimated location of the TurtleBot3 on the map which is displayed with tiny green arrows.
